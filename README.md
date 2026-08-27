@@ -65,20 +65,27 @@ Nenhuma biblioteca externa é necessária. O plugin usa apenas o wrapper TCPDF n
 
 ## Instalação
 
+### ⚠️ AVISO IMPORTANTE SOBRE O DOWNLOAD
+> **NÃO USE O BOTÃO VERDE "Code -> Download ZIP" DO GITHUB.**
+> O GitHub gera um ZIP com uma estrutura de pastas que o Moodle **não aceita** (ele criará uma pasta raiz com o nome do repositório, o que causará o erro `corrupted_archive_structure`).
+> 
+> **Para baixar a versão correta:** Acesse a aba **[Releases](https://github.com/erickalvs/gradeexport_pdf/releases)** no canto direito da página do GitHub e baixe o arquivo `gradeexport_pdf.zip` anexado à última versão lançada.
+
 ### Pré-requisito
 Você precisa ter acesso administrativo ao painel do Moodle.
 
 ### Método 1 — Via Upload de ZIP (Recomendado)
 
-1. Acesse seu Moodle como Administrador.
-2. No menu superior, vá em: Administração do Site -> Plugins -> Instalar Plugins.
-3. Clique em "Instalar plugin de arquivo ZIP".
-4. Faça upload do arquivo gradeexport_pdf.zip.
-5. Clique em "Instalar plugin a partir do arquivo ZIP".
-6. Na tela de validação, selecione o tipo de plugin como "Exportação de notas (gradeexport)".
-7. Clique em "Instalar plugin".
-8. Na página de atualização do banco de dados, clique em "Atualizar banco de dados do Moodle agora".
-9. Instalação concluída!
+1. Baixe o arquivo `gradeexport_pdf.zip` da página de **Releases** deste repositório.
+2. Acesse seu Moodle como Administrador.
+3. No menu superior, vá em: Administração do Site -> Plugins -> Instalar Plugins.
+4. Clique em "Instalar plugin de arquivo ZIP".
+5. Faça upload do arquivo `gradeexport_pdf.zip`.
+6. Clique em "Instalar plugin a partir do arquivo ZIP".
+7. Na tela de validação, selecione o tipo de plugin como "Exportação de notas (gradeexport)".
+8. Clique em "Instalar plugin".
+9. Na página de atualização do banco de dados, clique em "Atualizar banco de dados do Moodle agora".
+10. Instalação concluída!
 
 ### Método 2 — Via Servidor (SSH/FTP)
 

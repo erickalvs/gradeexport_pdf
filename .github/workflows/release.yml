@@ -1,0 +1,33 @@
+name: Moodle Plugin Release
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+      with:
+        path: pdf
+        
+    - name: Prepare ZIP structure
+      run: |
+        # Remove github actions folder from the plugin dir
+        rm -rf pdf/.github
+        # Remove any existing zip if it somehow got committed
+        rm -f pdf/*.zip
+        # Create the zip with the root folder 'pdf'
+        zip -r gradeexport_pdf.zip pdf/
+        
+    - name: Upload to Release
+      if: github.event_name == 'release'
+      uses: softprops/action-gh-release@v1
+      with:
+        files: gradeexport_pdf.zip
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
